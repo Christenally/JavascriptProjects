@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+/* This will be the customer container properties  */
+
+.todo-container {
+  background-color: white;
+  width: 500px;
+  height: auto;
+  text-align: center;
+  border-radius: 6px;
+  margin: 10px auto;
+
+  /* Grid */
+  display: grid;
+  grid-template-columns: 75% auto;
+}
+
+.todo-info {
+  color: black;
+  text-align: left;
+  margin: 20px;
+
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+}
+.todo-container button {
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  border-style: none;
+  justify-self: center;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+}
