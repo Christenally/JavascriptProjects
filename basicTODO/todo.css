@@ -7,6 +7,29 @@ body {
   background-color: black;
   font-family: sans-serif;
 }
+/* Todo Header */
+.todo-header-container {
+  width: 500px;
+  margin: 10px auto;
+
+  display: grid;
+  grid-template-columns: 85% auto;
+  column-gap: 10px;
+}
+
+.todo-input {
+  color: black;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.todo-input[type="text"] {
+  padding-left: 20px;
+}
+
+.todo-header-container button {
+  border-radius: 6px;
+}
 
 /* This will be the customer container properties  */
 
@@ -20,7 +43,7 @@ body {
 
   /* Grid */
   display: grid;
-  grid-template-columns: 75% auto;
+  grid-template-columns: 79% auto;
 }
 
 .todo-info {
