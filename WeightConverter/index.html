@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weight Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT CONTAINER -->
+      <div class="left-container">
+        <form id="converter-form">
+          <div>
+            <label for="lbs-input">Enter lbs</label>
+            <input type="text" id="lbs-input" name="lbs-input" />
+          </div>
+          <div>
+            <label for="choose-weight">Convert to</label>
+            <select
+              name="choose-weight"
+              id="choose-weight"
+              name="choose-weight"
+            >
+              <option value="kilograms">kilograms</option>
+              <option value="ounces">ounces</option>
+              <option value="stones">stones</option>
+              <option value="grams">grams</option>
+            </select>
+          </div>
+          <div>
+            <input type="submit" value="Convert" />
+          </div>
+        </form>
+      </div>
+      <!-- RIGHT CONTAINER -->
+      <div class="right-container">
+        <div>
+          <h1 class="display-conversion">0</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="weightconverter.js"></script>
+  </body>
+</html>
