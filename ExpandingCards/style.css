@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-size#syntax */
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  /* this will change */
+  flex: 0.5;
+  margin: 10px;
+  /* for the 3 */
+  position: relative;
+
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  /* when active will show */
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  /* last attribute is delay */
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel-4,
+  .panel-5 {
+    display: none;
+  }
+}
+
+.panel-1 {
+  background-image: url(images/background1.avif);
+}
+
+.panel-2 {
+  background-image: url(images/background2.avif);
+}
+
+.panel-3 {
+  background-image: url(images/background3.avif);
+}
+
+.panel-4 {
+  background-image: url(images/background4.avif);
+}
+
+.panel-5 {
+  background-image: url(images/background5.avif);
+}
