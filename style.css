@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(70, 69, 69);
+  font-family: "Jet Brains Mono", sans-serif;
+
+  overflow: hidden;
+}
+
+.header {
+  margin: 1.5rem auto;
+}
+
+.header .header-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.header .header-main-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.header .header-main-menu a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 300;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-normal {
+  max-width: 900px;
+}
+
+/* MAIN */
+
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  gap: 20px;
+}
+.section-item {
+  background-color: white;
+  padding: 1.5rem 1.5rem;
+  height: 10%;
+  overflow: hidden;
+}
+.section-item.active {
+  height: auto;
+}
+
+.section-item h3 {
+  padding-bottom: 10px;
+}
+
+.section-item ul {
+  list-style-type: none;
+  padding: 0 1.5rem;
+}
+
+.section-item.inactive ul {
+  color: red;
+  visibility: hidden;
+}
+
+.section-item.active ul {
+  color: red;
+}
+
+.section-item li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid black;
+}
+
+/* .section-item.inactive ul {
+  opacity: 0;
+}
+
+.section-item.active ul {
+  opacity: 1;
+} */
