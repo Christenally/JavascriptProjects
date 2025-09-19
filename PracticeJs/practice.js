@@ -1,5 +1,3 @@
-"use strict";
-
 //1. basic Destructuring
 // const colors = ["red", "green", "blue"];
 
@@ -60,8 +58,66 @@
 //Haven't learned this yet
 
 //10. Practical Example(Swapping in Array)
-const array = ["first", "second", "third"];
+// const array = ["first", "second", "third"];
 
-[array[0], array[2]] = [array[2], array[0]];
+// [array[0], array[2]] = [array[2], array[0]];
 
-console.log(array);
+// console.log(array);
+
+//objects - define key value pairs
+
+class Product {
+  constructor(name, price) {
+    (this.name = name), (this.price = price);
+  }
+
+  displayProduct() {
+    console.log(`Product : ${this.name};`);
+    console.log(`Price :$ ${this.price.toFixed(2)};`);
+  }
+
+  calcTotal(salesTax) {
+    let tax = this.price * salesTax;
+    console.log(tax.toFixed(2));
+    return (this.price + tax).toFixed(2);
+  }
+}
+
+// const idea = {
+//   day: undefined,
+//   time: undefined,
+//   month: undefined,
+//   year: undefined,
+
+//   Idea: function (day, time, month, year) {
+//     this.day = day;
+//     this.time = time;
+//     this.month = month;
+//     this.year = year;
+//   },
+// };
+
+function Idea(day, time, month, year) {
+  this.day = day;
+  this.time = time;
+  this.month = month;
+  this.year = year;
+}
+
+const newIdea = new Idea("tuesday", 9, "july", 1991);
+
+({ day, year } = newIdea);
+console.log(day, year);
+// const {
+//   booty: currentDay = [],
+//   time: currentTime = [],
+//   month: currentMonth = [],
+// } = newIdea;
+
+// let a = 111;
+// let b = 999;
+
+// const letters = { a: 2, b: 54, c: 33 }; //this is an object on one line! Don't be confused
+
+letters = { a: 2, b: 54, c: 33 };
+console.log(letters);
