@@ -13,6 +13,8 @@
   --container-normal: 1100px;
   --container-wide: 1400px;
   --container-narrow: 900px;
+
+  --bg-dark: #333;
 }
 
 .section-heading {
@@ -43,8 +45,44 @@ img {
 
 .bg-primary {
   background: var(--primary-color);
+  color: #333;
 }
 
+.bg-dark {
+  background: var(--bg-dark);
+  color: white;
+}
+
+.bg-dark .bg-primary {
+  padding: 0 0.3rem;
+}
+
+.hide-this {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid #333;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+  transition: color 0.3s ease-in;
+}
+
+.btn:hover {
+  background: #333;
+  color: white;
+}
 /* HEADER + NAV */
 
 .container {
@@ -160,7 +198,7 @@ img {
 
 /* Services - About */
 .services {
-  background-color: #333;
+  background-color: var(--bg-dark);
   color: white;
   padding: 3rem 0 4rem;
 }
@@ -195,6 +233,46 @@ img {
 .team img {
   border-radius: 10px;
 }
+/* Contact */
+
+.contact {
+  padding: 3rem 0 4rem;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-group {
+  margin: 2rem 0;
+}
+
+.contact input,
+.contact textarea {
+  border: none;
+  border-bottom: 1px #333 solid;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding-bottom: 1rem;
+}
+
+.contact textarea {
+  height: 200px;
+  border: 1px solid #333;
+  padding: 0.5rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 0;
+}
+
+.contact button {
+  width: 100%;
+}
+
 /* MEDIA queries */
 
 @media (max-width: 768px) {
